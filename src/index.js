@@ -2,6 +2,8 @@ import readlineSync from 'readline-sync';
 
 export const getRandomNumber = (max = 100) => Math.floor(Math.random() * Math.floor(max));
 
+export const getRandomNumberInRange = (min, max) => getRandomNumber(max - min) + min;
+
 const getName = () => readlineSync.question('May I have your name? ');
 
 const sayHello = (name) => {
