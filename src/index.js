@@ -27,11 +27,14 @@ const playGame = (game) => {
         correctAnswers += 1;
       } else {
         console.log(`Let's try again, ${name}!`);
+        break;
       }
     }
   }
 
-  console.log(`Congratulations, ${name}!`);
+  if (correctAnswers === CORRECT_ANSWERS_TO_WIN) {
+    console.log(`Congratulations, ${name}!`);
+  }
 };
 
 export const getUserAnswer = () => readlineSync.question('Your answer: ');
