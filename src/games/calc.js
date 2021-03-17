@@ -1,5 +1,5 @@
 import {
-  getRandomNumber, getUserAnswer, alertCorrect, alertWrong,
+  getRandomNumber, getUserAnswer, alertCorrect, alertWrong, showQuestion,
 } from '../index.js';
 
 const getRandomExpression = () => {
@@ -32,7 +32,7 @@ const getRandomExpression = () => {
 
 const play = () => {
   const { lhs, rhs, expression } = getRandomExpression();
-  console.log(`Question: ${expression.toString(lhs, rhs)}`);
+  showQuestion(expression.toString(lhs, rhs));
 
   const rightAnswer = expression.calculate(lhs, rhs);
   const answer = Number(getUserAnswer());

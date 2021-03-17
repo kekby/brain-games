@@ -36,5 +36,6 @@ export const getUserAnswer = () => readlineSync.question('Your answer: ');
 
 export const alertCorrect = () => console.log('Correct!');
 export const alertWrong = (answer, rightAnswer) => console.log(`'${answer}' is wrong answer ;(. Correct answer was '${rightAnswer}'`);
+export const showQuestion = (question) => console.log(`Question: ${question}`);
 
 export default playGame;

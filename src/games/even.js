@@ -1,5 +1,5 @@
 import {
-  getRandomNumber, getUserAnswer, alertCorrect, alertWrong,
+  getRandomNumber, getUserAnswer, alertCorrect, alertWrong, showQuestion,
 } from '../index.js';
 
 const GUESS_YES = 'yes';
@@ -29,8 +29,8 @@ const isCorrectAnswer = (answer, guessedNumber) => {
 
 const play = () => {
   const guessedNumber = getRandomNumber();
+  showQuestion(guessedNumber);
 
-  console.log(`Question: ${guessedNumber}`);
   const answer = getUserAnswer();
 
   const isAnswerCorrect = isCorrectAnswer(answer, guessedNumber);
