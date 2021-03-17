@@ -31,7 +31,7 @@ const playGame = (game) => {
     }
   }
 
-  console.log(`Congratulations, ${name}`);
+  console.log(`Congratulations, ${name}!`);
 };
 
 export const getUserAnswer = () => readlineSync.question('Your answer: ');

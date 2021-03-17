@@ -1,9 +1,7 @@
 import {
   getRandomNumber, getUserAnswer, alertCorrect, alertWrong, showQuestion,
 } from '../index.js';
-
-const GUESS_YES = 'yes';
-const GUESS_NO = 'no';
+import { GUESS_YES, GUESS_NO } from '../constants.js';
 
 const isEven = (number) => number % 2 === 0;
 
